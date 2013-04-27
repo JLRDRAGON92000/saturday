@@ -11,7 +11,7 @@ end
 post '/login' do
   @username = params[:username]
   @password = params[:password]
-  session[:user]=@username
+  session[:user] = @username
   redirect "/home"
 end
 
