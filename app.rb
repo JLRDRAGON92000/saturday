@@ -11,18 +11,8 @@ end
 post '/login' do
   @username = params[:username]
   @password = params[:password]
-  if @username=="JLRDRAGON92000"
-    if @password=="lolfail"
-      session[:user]="JLRDRAGON92000"
-      redirect "/home"
-    else
-      @error="Incorrect password"
-      erb :index
-    end
-  else
-    @error="Incorrect username"
-    erb :index
-  end
+  session[:user]=@username
+  redirect "/home"
 end
 
 get "/bomb" do
