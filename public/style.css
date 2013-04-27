@@ -1,9 +1,9 @@
 * {
-  font-family: Arial;
+  font-family: Papyrus;
 }
 
 body {
-    background: #e8f4f9;
+	background: url(/abstract-background-2.jpg);
 }
 
 .box {
@@ -14,13 +14,16 @@ body {
   text-align: center;
   -webkit-border-radius: 10px;
   border-radius: 10px;
-  background: white;
+  background: black;
   padding: 40px 10px;;
-  box-sizing:border-box;
+  box-sizing: border-box;
+  color: white;
 }
+
 .box .title {
   font-size: 24px;
   margin-bottom: 50px;
+  color: white;
 }
 
 input {
@@ -32,7 +35,7 @@ input {
 }
 
 h1 {
-    color: #593918;
+    color: white;
 }
 
 .bordered {
@@ -51,4 +54,38 @@ h1 {
   border-radius: 10px;
   padding: 5;
   box-sizing:border-box;
+}
+
+.coollink {
+	text-decoration: none;
+	color: grey;
+}
+.coollink:active {
+	text-decoration: none;
+	color: grey;
+}
+.coollink:hover {
+	text-decoration: none;
+	color: lightgrey;
+}
+.coollink:visited {
+	text-decoration: none;
+	color: grey;
+}
+
+.hidelink {
+	text-decoration: none;
+	color: black;
+}
+.hidelink:active {
+	text-decoration: none;
+	color: black;
+}
+.hidelink:hover {
+	text-decoration: none;
+	color: black;
+}
+.hidelink:visited {
+	text-decoration: none;
+	color: black;
 }

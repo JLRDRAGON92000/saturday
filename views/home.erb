@@ -1,0 +1,22 @@
+<html>
+	<head>
+    	<title>Hello <%= @username%></title>
+		<link href="/style.css" rel="stylesheet" type="text/css">
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+		<script type="text/javascript">
+		$(function() {
+			$('h1').click(function() {
+				alert("I told you not to click me.")
+				window.location="/bomb"
+			})
+		})
+		</script>
+	</head>
+ 	<body>
+		<div class="box">
+			Hello JLRDRAGON92000!
+			<br/>
+			<h1>Don't click me!!!!</h1>
+		</div>
+	</body>
+</html>
