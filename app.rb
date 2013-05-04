@@ -16,7 +16,9 @@ end
 post '/login' do
   @username = params[:username]
   @password = params[:password]
-  if @username==nil or @password==nil then @error="Invalid entry: Field cannot be blank"
+  if @username == nil or @password == nil then
+    @error="Invalid entry: Field cannot be blank"
+    erb :login
   else
   session[:user] = @username
   redirect "/home"
