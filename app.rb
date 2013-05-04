@@ -1,11 +1,16 @@
 require 'sinatra'
 require 'sinatra/reloader'
 require "json"
+require 'koala'
 
 enable :sessions
 
 get '/' do
   erb :index
+end
+
+get "/login" do
+  erb :login
 end
 
 post '/login' do
@@ -26,4 +31,20 @@ end
 
 get "/home" do
   erb :home
+end
+
+get "/secret" do
+  return redirect "/" unless session[:user]
+  @graph=Koala::Facebook::API.new
+  @picture=@graph.get_picture("jpozelc")
+  erb :secret
+end
+
+get "/search" do
+  erb :google
+end
+
+post "/search" do
+  @search=params[:search]
+  redirect "http://www.google.com/search?q=#{@search}"
 end
