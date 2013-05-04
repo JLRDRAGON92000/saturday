@@ -30,7 +30,11 @@ get "/logout" do
 end
 
 get "/home" do
+  if(session[:user]).downcase=="collin" then
+    erb :rickroll
+  else
   erb :home
+end
 end
 
 get "/secret" do
