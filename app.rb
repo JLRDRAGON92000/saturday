@@ -16,7 +16,7 @@ end
 post '/login' do
   @username = params[:username]
   @password = params[:password]
-  if @username == nil or @password == nil then
+  if !@username or !@password then
     @error="Invalid entry: Field cannot be blank"
     erb :login
   else
