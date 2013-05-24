@@ -1,6 +1,5 @@
 require 'sinatra'
 require 'sinatra/reloader'
-require "json"
 require 'koala'
 
 enable :sessions
@@ -16,7 +15,7 @@ end
 post '/login' do
   @username = params[:username]
   @password = params[:password]
-  if !@username or !@password then
+  if @username=="" or @password=="" then
     @error="Invalid entry: Field cannot be blank"
     erb :login
   else
@@ -31,7 +30,7 @@ end
 
 get "/logout" do
   session[:user]=nil
-  erb :index
+  redirect "/"
 end
 
 get "/home" do
@@ -54,6 +53,6 @@ get "/search" do
 end
 
 post "/search" do
-  @search=params[:search]
+  @search = params[:search]
   redirect "http://www.google.com/search?q=#{@search}"
 end

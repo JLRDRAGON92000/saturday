@@ -20,7 +20,7 @@ body {
   color: white;
 }
 
-.specialbox {
+.errbox {
   width: 400px;
   height: 400px;
   margin: 100px auto;
@@ -28,11 +28,13 @@ body {
   text-align: center;
   -webkit-border-radius: 10px;
   border-radius: 10px;
-  background: url('/computer-hd-wallpapers-7.jpg');
+  background: red;
   padding: 40px 10px;;
   box-sizing: border-box;
   color: white;
+  border-color: darkred;
 }
+
 
 .bigbox {
   width: 640px;
